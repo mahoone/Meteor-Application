@@ -1,0 +1,31 @@
+<template name="HomeLayout">
+	<header>
+		<h1>WorkoutPal</h1>
+		{{> loginButtons}}
+	</header>
+	<main>
+	<div class="container">
+		<div class="background" id="particles-js"></div>
+		<div style="background-color: black;"></div>
+	</div>
+	</main>
+	<div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-4 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <div class="copyright">
+				    &copy;
+				    <span id="copyright">
+				        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+				    </span>
+				    WorkoutPal
+				</div>
+            </div>
+        </footer>
+    </div>
+</template>
+
+
+

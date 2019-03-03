@@ -1,0 +1,24 @@
+<template name="Workout">
+	<article class="workout {{#if inRoutine}}in-routine{{/if}}">
+		<h3>{{name}}</h3>
+		{{#if editMode }}
+			{{> quickForm collection="Workouts" id=updateWorkoutId type="update" doc=this autosave=true}}
+		{{else}}
+		<h4>{{desc}}</h4>
+		<p>
+			{{#each exercise}}
+				<ul><span class="exercise">{{name}} - Reps: {{reps}} Sets: {{sets}}</span></ul>
+			{{/each}}
+		</p>
+		
+	
+		{{#if inRoutine }}
+			<button class="btn-deny toggle-menu">Remove From List</button>
+		{{else}}	
+			<button class="btn-primary toggle-menu">Add To List</button>
+		{{/if}}
+	{{/if}}
+		<i class="fa fa-pencil"></i>
+		<i class="fa fa-trash"></i>
+	</article>
+</template>

@@ -1,0 +1,21 @@
+.login-buttons-dropdown-align- #login-dropdown-list {
+    right: 0;
+    left: auto;
+}
+
+#login-buttons .login-button, .accounts-dialog .login-button {
+    cursor: pointer;
+    user-select: none;
+    font-size: 80%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 4px 8px;
+    background: rgb(89, 101, 149);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(70, 79, 117);
+    border-image: initial;
+    border-radius: 4px;
+}

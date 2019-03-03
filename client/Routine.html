@@ -1,0 +1,24 @@
+<template name="Routine">
+	<h1>My Current Routine</h1>
+	{{#each workouts}}
+		{{> RoutineExercise}}
+	{{else}}
+		<h3>Please add <a href="/workout-list">workout</a> to your list</h3>
+	{{/each}}
+</template>
+
+<template name="RoutineExercise">
+	<div class="routine-exercise">
+		<h3>{{name}}</h3>
+		<p>{{desc}}</p>
+		<p id="demo">Created on: {{createdAt}}</p>
+		<a href="/workout-list"><button>View routine</button></a>
+		<script>
+	$( document ) .ready(function myFunction() {
+    var str = document.getElementById("demo").innerHTML; 
+    var res = str.replace("GMT+0100 (GMT Daylight Time)", "");
+    document.getElementById("demo").innerHTML = res;
+})
+</script>
+	</div>
+</template>

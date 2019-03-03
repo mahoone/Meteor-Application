@@ -1,0 +1,12 @@
+<template name="ExerciseList">
+	<h1 class="pagetitle">My Exercise List</h1>
+	<ul class="exercise-list">
+		{{#each exerciseList}}
+			{{#each exercise}}
+			<li>{{name}}</li>
+			{{/each}}
+		{{else}}
+		<li>Please add <a href="/workout-list">exercise</a> to your list</li>
+		{{/each}}
+	</ul>
+</template>
